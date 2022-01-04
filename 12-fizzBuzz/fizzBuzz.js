@@ -1,17 +1,17 @@
 function fizzBuzz(start, end) {
-  let arr = new Array((end - start)+1);
-  for(let i=1;i < arr.length;i++){
-    if(i%3 ==0){
-      arr[i] = "Fizz";
+  let arr = new Array((end-start)+1)
+  arr[0]=start;
+  arr[arr.length-1] = end;
+  for(let i =0;i<arr.length;i++)  {
+    arr[i] = start+i;
+    if(arr[i] %15 == 0){
+      arr[i] = "FizzBuzz"
     }
-    else if(i%5 ==0){
-      arr[i] = "Buzz";
+    else if(arr[i]%3 == 0){
+      arr[i] = "Fizz"
     }
-    else if(i%3 ==0 && i%5 == 0){
-      arr[i] = "FizzBuzz";
-    }
-    else{
-    arr[i] = i;
+    else if(arr[i]%5 == 0){
+      arr[i] = "Buzz"
     }
   }
   return arr;
